@@ -35,16 +35,7 @@ extra_javascript:
 
 nav:
   - Home: index.md
-  - Threads:
-      - Overview: threads/index.md
-      - Metric: threads/metric.md
-  - GD&T: gdt/index.md
-  - Fits and Tolerances: fits-and-tolerances/index.md
-  - Materials: materials/index.md
-  - Metrology: metrology/index.md
-  - DFM: dfm/index.md
-  - Heat Transfer: heat-transfer/index.md
-  - Electronics: electronics/index.md
+  - Typical Screw Torques: typical-screw-torques.md
   - Licence: licence.md
 
 copyright: >
