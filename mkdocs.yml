@@ -1,0 +1,51 @@
+site_name: Engineering Notes
+site_description: Structured engineering design notes and worked examples.
+site_url: https://example.github.io/design-notes/ # TODO: Replace with your final GitHub Pages URL or custom domain.
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.details
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Threads:
+      - Overview: threads/index.md
+      - Metric: threads/metric.md
+  - GD&T: gdt/index.md
+  - Fits and Tolerances: fits-and-tolerances/index.md
+  - Materials: materials/index.md
+  - Metrology: metrology/index.md
+  - DFM: dfm/index.md
+  - Heat Transfer: heat-transfer/index.md
+  - Electronics: electronics/index.md
+  - Licence: licence.md
+
+copyright: >
+  © 2026 Engineering Notes contributors. Content licensed under CC BY-NC 4.0.

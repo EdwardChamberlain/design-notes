@@ -3,6 +3,10 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# OS junk
+.DS_Store
+Thumbs.db
+
 # C extensions
 *.so
 
@@ -138,6 +142,7 @@ celerybeat.pid
 .env
 .envrc
 .venv
+.venv/
 env/
 venv/
 ENV/
@@ -153,6 +158,7 @@ venv.bak/
 
 # mkdocs documentation
 /site
+site/
 
 # mypy
 .mypy_cache/
