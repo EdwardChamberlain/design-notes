@@ -1,6 +1,6 @@
 site_name: Engineering Notes
 site_description: Structured engineering design notes and worked examples.
-site_url: https://example.github.io/design-notes/ # TODO: Replace with your final GitHub Pages URL or custom domain.
+site_url: https://notes.edchamberlain.com/
 
 theme:
   name: material
