@@ -1,8 +1,5 @@
 # Licence
 
-## Purpose
-State how these engineering notes may be reused.
-
 ## Key rules
 - This site is licensed under **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**.
 - You may copy and adapt the content with attribution.
