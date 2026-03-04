@@ -4,6 +4,9 @@ site_url: https://notes.edchamberlain.com/
 
 theme:
   name: material
+  palette:
+    scheme: slate
+    primary: blue grey
   features:
     - navigation.sections
     - navigation.top
