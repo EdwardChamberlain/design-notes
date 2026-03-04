@@ -17,6 +17,47 @@
   letter-spacing: -0.01em;
 }
 
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.md-typeset h1 {
+  margin-top: 0;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1 {
+  color: #ffffff;
+}
+
+.md-typeset h2 {
+  margin-top: 1.75rem;
+}
+
+.md-typeset h3 {
+  margin-top: 1.5rem;
+}
+
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  margin-top: 1.25rem;
+}
+
+.md-typeset h1 + *,
+.md-typeset h2 + *,
+.md-typeset h3 + *,
+.md-typeset h4 + *,
+.md-typeset h5 + *,
+.md-typeset h6 + * {
+  margin-top: 0;
+}
+
 .md-typeset pre > code {
   font-size: 0.8rem;
 }
