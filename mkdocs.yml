@@ -18,6 +18,9 @@ theme:
 plugins:
   - search
 
+hooks:
+  - hooks/nav_order.py
+
 markdown_extensions:
   - tables
   - toc:
