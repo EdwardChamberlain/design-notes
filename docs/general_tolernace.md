@@ -1,89 +1,64 @@
 # General Tolerances
+General tolerances as defined by DIN ISO 2768 and BS EN 22768.
 
-General tolerances as defined by DIN ISO 2768.
+## Example Drawing Note
+> Unless otherwise specified, variations on dimensions without individual tolerance values are according to **DIN ISO 2768-mk**.
 
-Unless otherwise specified, variations on dimensions without individual tolerance values are according to **DIN ISO 2768-mk**.
+## Linear Dimensions
+| From (mm) | To (mm) | f (fine) | m (medium) | c (coarse) | v (very coarse) |
+| --- | --- | --- | --- | --- | --- |
+| 0.5 | 3 | +/- 0.05 | +/- 0.1 | +/- 0.2 | - |
+| >3 | 6 | +/- 0.05 | +/- 0.1 | +/- 0.3 | +/- 0.5 |
+| >6 | 30 | +/- 0.1 | +/- 0.2 | +/- 0.5 | +/- 1.0 |
+| >30 | 120 | +/- 0.15 | +/- 0.3 | +/- 0.8 | +/- 1.5 |
+| >120 | 400 | +/- 0.2 | +/- 0.5 | +/- 1.2 | +/- 2.5 |
+| >400 | 1000 | +/- 0.3 | +/- 0.8 | +/- 2.0 | +/- 4.0 |
+| >1000 | 2000 | +/- 0.5 | +/- 1.2 | +/- 3.0 | +/- 6.0 |
+| >2000 | 4000 | - | +/- 2.0 | +/- 4.0 | +/- 8.0 |
 
-## General Tolerances for Linear and Angular Dimensions (DIN ISO 2768-1)
+## External Radius and Chamfer Heights
+| From (mm) | To (mm) | f (fine) | m (medium) | c (coarse) | v (very coarse) |
+| --- | --- | --- | --- | --- | --- |
+| 0.5 | 3 | +/- 0.2 | +/- 0.2 | +/- 0.4 | +/- 0.4 |
+| >3 | 6 | +/- 0.5 | +/- 0.5 | +/- 1.0 | +/- 1.0 |
+| >6 | and above | +/- 1.0 | +/- 1.0 | +/- 2.0 | +/- 2.0 |
 
-### Linear Dimensions
+## Angular Dimensions
+| From (mm) | To (mm) | f (fine) | m (medium) | c (coarse) | v (very coarse) |
+| --- | --- | --- | --- | --- | --- |
+| 0 | 10 | +/- 1 deg | +/- 1 deg | +/- 1 deg 30' | +/- 3 deg |
+| >10 | 50 | +/- 0 deg 30' | +/- 0 deg 30' | +/- 1 deg | +/- 2 deg |
+| >50 | 120 | +/- 0 deg 20' | +/- 0 deg 20' | +/- 0 deg 30' | +/- 1 deg |
+| >120 | 400 | +/- 0 deg 10' | +/- 0 deg 10' | +/- 0 deg 15' | +/- 0 deg 30' |
+| >400 | and above | +/- 0 deg 5' | +/- 0 deg 5' | +/- 0 deg 10' | +/- 0 deg 20' |
 
-Permissible deviations in mm for ranges in nominal lengths:
-
-| Nominal length range (mm) | f (fine) | m (medium) | c (coarse) | v (very coarse) |
+## Straightness and Flatness
+| From (mm) | To (mm) | H | K | L |
 | --- | --- | --- | --- | --- |
-| 0.5 up to 3 | +/- 0.05 | +/- 0.1 | +/- 0.2 | - |
-| over 3 up to 6 | +/- 0.05 | +/- 0.1 | +/- 0.3 | +/- 0.5 |
-| over 6 up to 30 | +/- 0.1 | +/- 0.2 | +/- 0.5 | +/- 1.0 |
-| over 30 up to 120 | +/- 0.15 | +/- 0.3 | +/- 0.8 | +/- 1.5 |
-| over 120 up to 400 | +/- 0.2 | +/- 0.5 | +/- 1.2 | +/- 2.5 |
-| over 400 up to 1000 | +/- 0.3 | +/- 0.8 | +/- 2.0 | +/- 4.0 |
-| over 1000 up to 2000 | +/- 0.5 | +/- 1.2 | +/- 3.0 | +/- 6.0 |
-| over 2000 up to 4000 | - | +/- 2.0 | +/- 4.0 | +/- 8.0 |
+| 0 | 10 | 0.02 | 0.05 | 0.1 |
+| >10 | 30 | 0.05 | 0.1 | 0.2 |
+| >30 | 100 | 0.1 | 0.2 | 0.4 |
+| >100 | 300 | 0.2 | 0.4 | 0.8 |
+| >300 | 1000 | 0.3 | 0.6 | 1.2 |
+| >1000 | 3000 | 0.4 | 0.8 | 1.6 |
 
-### External Radius and Chamfer Heights
-
-Permissible deviations in mm for ranges in nominal lengths:
-
-| Nominal length range (mm) | f (fine) | m (medium) | c (coarse) | v (very coarse) |
+## Perpendicularity
+| From (mm) | To (mm) | H | K | L |
 | --- | --- | --- | --- | --- |
-| 0.5 up to 3 | +/- 0.2 | +/- 0.2 | +/- 0.4 | +/- 0.4 |
-| over 3 up to 6 | +/- 0.5 | +/- 0.5 | +/- 1.0 | +/- 1.0 |
-| over 6 | +/- 1.0 | +/- 1.0 | +/- 2.0 | +/- 2.0 |
+| 0 | 100 | 0.2 | 0.4 | 0.6 |
+| >100 | 300 | 0.3 | 0.6 | 1.0 |
+| >300 | 1000 | 0.4 | 0.8 | 1.5 |
+| >1000 | 3000 | 0.5 | 0.8 | 2.0 |
 
-### Angular Dimensions
-
-Permissible deviations for ranges in nominal lengths:
-
-| Nominal length range (mm) | f (fine) | m (medium) | c (coarse) | v (very coarse) |
+## Symmetry
+| From (mm) | To (mm) | H | K | L |
 | --- | --- | --- | --- | --- |
-| up to 10 | +/- 1 deg | +/- 1 deg | +/- 1 deg 30' | +/- 3 deg |
-| over 10 up to 50 | +/- 0 deg 30' | +/- 0 deg 30' | +/- 1 deg | +/- 2 deg |
-| over 50 up to 120 | +/- 0 deg 20' | +/- 0 deg 20' | +/- 0 deg 30' | +/- 1 deg |
-| over 120 up to 400 | +/- 0 deg 10' | +/- 0 deg 10' | +/- 0 deg 15' | +/- 0 deg 30' |
-| over 400 | +/- 0 deg 5' | +/- 0 deg 5' | +/- 0 deg 10' | +/- 0 deg 20' |
+| 0 | 100 | 0.5 | 0.6 | 0.6 |
+| >100 | 300 | 0.5 | 0.6 | 1.0 |
+| >300 | 1000 | 0.5 | 0.8 | 1.5 |
+| >1000 | 3000 | 0.5 | 1.0 | 2.0 |
 
-## General Tolerances for Form and Position (DIN ISO 2768-2)
-
-### Straightness and Flatness
-
-Tolerance values in mm:
-
-| Nominal length range (mm) | H | K | L |
-| --- | --- | --- | --- |
-| up to 10 | 0.02 | 0.05 | 0.1 |
-| over 10 up to 30 | 0.05 | 0.1 | 0.2 |
-| over 30 up to 100 | 0.1 | 0.2 | 0.4 |
-| over 100 up to 300 | 0.2 | 0.4 | 0.8 |
-| over 300 up to 1000 | 0.3 | 0.6 | 1.2 |
-| over 1000 up to 3000 | 0.4 | 0.8 | 1.6 |
-
-### Perpendicularity
-
-Tolerance values in mm:
-
-| Nominal length range (mm) | H | K | L |
-| --- | --- | --- | --- |
-| up to 100 | 0.2 | 0.4 | 0.6 |
-| over 100 up to 300 | 0.3 | 0.6 | 1.0 |
-| over 300 up to 1000 | 0.4 | 0.8 | 1.5 |
-| over 1000 up to 3000 | 0.5 | 0.8 | 2.0 |
-
-### Symmetry
-
-Tolerance values in mm:
-
-| Nominal length range (mm) | H | K | L |
-| --- | --- | --- | --- |
-| up to 100 | 0.5 | 0.6 | 0.6 |
-| over 100 up to 300 | 0.5 | 0.6 | 1.0 |
-| over 300 up to 1000 | 0.5 | 0.8 | 1.5 |
-| over 1000 up to 3000 | 0.5 | 1.0 | 2.0 |
-
-### Run-out
-
-Tolerance values in mm:
-
+## Run-out
 | H | K | L |
 | --- | --- | --- |
 | 0.1 | 0.2 | 0.5 |
