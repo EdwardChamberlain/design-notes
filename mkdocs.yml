@@ -6,7 +6,8 @@ theme:
   name: material
   palette:
     scheme: slate
-    primary: blue grey
+    primary: deep orange
+    accent: deep orange
   features:
     - navigation.sections
     - navigation.top
