@@ -19,6 +19,8 @@ Unless otherwise specified, variations on dimensions without individual toleranc
 | 1000 | 2000 | ± 0.5 | ± 1.2 | ± 3.0 | ± 6.0 |
 | 2000 | 4000 | - | ± 2.0 | ± 4.0 | ± 8.0 |
 
+> DIN ISO 2768
+
 ## External Radius and Chamfer Heights
 <!-- table-class: table-hl-col-2 -->
 | From [mm] | To [mm] | f (fine) | m (medium) | c (coarse) | v (very coarse) |
@@ -26,6 +28,8 @@ Unless otherwise specified, variations on dimensions without individual toleranc
 | 0.5 | 3 | ± 0.2 | ± 0.2 | ± 0.4 | ± 0.4 |
 | 3 | 6 | ± 0.5 | ± 0.5 | ± 1.0 | ± 1.0 |
 | 6 | and above | ± 1.0 | ± 1.0 | ± 2.0 | ± 2.0 |
+
+> DIN ISO 2768
 
 ## Angular Dimensions
 <!-- table-class: table-hl-col-2 -->
@@ -36,6 +40,8 @@ Unless otherwise specified, variations on dimensions without individual toleranc
 | 50 | 120 | ± 0.333° | ± 0.333° | ± 0.500° | ± 1.000° |
 | 120 | 400 | ± 0.167° | ± 0.167° | ± 0.250° | ± 0.500° |
 | 400 | and above | ± 0.083° | ± 0.083° | ± 0.167° | ± 0.333° |
+
+> DIN ISO 2768
 
 ## Straightness and Flatness
 <!-- table-class: table-hl-col-2 -->
@@ -48,6 +54,8 @@ Unless otherwise specified, variations on dimensions without individual toleranc
 | 300 | 1000 | 0.3 | 0.6 | 1.2 |
 | 1000 | 3000 | 0.4 | 0.8 | 1.6 |
 
+> DIN ISO 2768
+
 ## Perpendicularity
 <!-- table-class: table-hl-col-2 -->
 | From [mm] | To [mm] | H | K | L |
@@ -56,6 +64,8 @@ Unless otherwise specified, variations on dimensions without individual toleranc
 | 100 | 300 | 0.3 | 0.6 | 1.0 |
 | 300 | 1000 | 0.4 | 0.8 | 1.5 |
 | 1000 | 3000 | 0.5 | 0.8 | 2.0 |
+
+> DIN ISO 2768
 
 ## Symmetry
 <!-- table-class: table-hl-col-2 -->
@@ -66,8 +76,14 @@ Unless otherwise specified, variations on dimensions without individual toleranc
 | 300 | 1000 | 0.5 | 0.8 | 1.5 |
 | 1000 | 3000 | 0.5 | 1.0 | 2.0 |
 
+> DIN ISO 2768
+
 ## Run-out
+
 <!-- table-class: table-hl-no-col -->
 | H | K | L |
 | --- | --- | --- |
 | 0.1 | 0.2 | 0.5 |
+
+> DIN ISO 2768
+
