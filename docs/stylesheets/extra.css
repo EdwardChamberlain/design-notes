@@ -1,7 +1,7 @@
 [data-md-color-scheme="slate"] {
   /* Keep foreground highly readable while giving the page a softer blue-grey body */
-  --md-default-bg-color: #1f2630;
-  --md-default-bg-color--light: #2a3340;
+  --md-default-bg-color: #272727;
+  --md-default-bg-color--light: #272727;
   --md-default-bg-color--lighter: #354153;
   --md-default-bg-color--lightest: #404f65;
   --md-default-fg-color: #e6edf7;
