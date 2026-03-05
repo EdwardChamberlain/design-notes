@@ -8,15 +8,18 @@
 }
 
 .md-typeset {
+  /* Slightly increased reading line-height for body content */
   line-height: 1.7;
 }
 
+/* Tighten heading letter spacing for a cleaner display feel */
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3 {
   letter-spacing: -0.01em;
 }
 
+/* Make all heading levels bold and remove trailing space below headings */
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3,
@@ -27,14 +30,17 @@
   margin-bottom: 0;
 }
 
+/* Keep page title flush with the top of the content area */
 .md-typeset h1 {
   margin-top: 0;
 }
 
+/* Improve H1 contrast in dark theme */
 [data-md-color-scheme="slate"] .md-typeset h1 {
   color: #ffffff;
 }
 
+/* Heading lead spacing by level */
 .md-typeset h2 {
   margin-top: 1.75rem;
 }
@@ -49,6 +55,7 @@
   margin-top: 1.25rem;
 }
 
+/* Remove top margin from the first block directly after a heading */
 .md-typeset h1 + *,
 .md-typeset h2 + *,
 .md-typeset h3 + *,
@@ -58,35 +65,9 @@
   margin-top: 0;
 }
 
+/* Compact monospace text inside fenced code blocks */
 .md-typeset pre > code {
   font-size: 0.8rem;
-}
-
-.md-typeset table:not([class]) {
-  display: block;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.md-typeset table:not([class]) th,
-.md-typeset table:not([class]) td {
-  text-align: center !important;
-  vertical-align: middle;
-}
-
-/* First column: slightly darker accent */
-.md-typeset table:not([class]) th:first-child,
-.md-typeset table:not([class]) td:first-child {
-  background-color: var(--md-accent-fg-color);
-  background-color: color-mix(in srgb, var(--md-accent-fg-color) 60%, #000 40%);
-  color: var(--md-accent-bg-color);
-  font-weight: 600;
-}
-
-/* First row: accent (takes precedence over first-column rule) */
-.md-typeset table:not([class]) thead tr:first-child > * {
-  background-color: var(--md-accent-fg-color);
-  color: var(--md-accent-bg-color);
 }
 
 /* Wrap long lines in code blocks */
