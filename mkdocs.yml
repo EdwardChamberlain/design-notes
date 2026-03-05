@@ -1,13 +1,15 @@
-site_name: Engineering Notes
+site_name: Engineering Design Notes and References
 site_description: Structured engineering design notes and worked examples.
 site_url: https://notes.edchamberlain.com/
 
 theme:
   name: material
+
   palette:
     scheme: slate
-    primary: deep orange
-    accent: deep orange
+    primary: blue
+    accent: blue
+
   features:
     - navigation.sections
     - navigation.top
