@@ -65,6 +65,22 @@
   margin-top: 0;
 }
 
+/* Make blockquotes read as compact source notes */
+.md-typeset blockquote {
+  font-size: 0.72rem;
+  line-height: 1.45;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.md-typeset blockquote > :first-child {
+  margin-top: 0;
+}
+
+.md-typeset blockquote > :last-child {
+  margin-bottom: 0;
+}
+
 /* Compact monospace text inside fenced code blocks */
 .md-typeset pre > code {
   font-size: 0.8rem;

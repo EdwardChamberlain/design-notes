@@ -18,6 +18,12 @@
   margin-top: 1.5em;
 }
 
+/* Allow source-note blockquotes to sit directly under tables */
+.md-typeset table:not([class]) + blockquote,
+.md-typeset table[class*="table-hl-"] + blockquote {
+  margin-top: 0;
+}
+
 /* Cell sizing, borders, and centered content */
 .md-typeset table:not([class]) th,
 .md-typeset table[class*="table-hl-"] th {
