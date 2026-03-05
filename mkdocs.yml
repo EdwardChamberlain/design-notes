@@ -20,6 +20,7 @@ plugins:
 
 hooks:
   - hooks/nav_order.py
+  - hooks/table_classes.py
 
 markdown_extensions:
   - tables
