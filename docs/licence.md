@@ -5,8 +5,9 @@
 - You may copy and adapt the content with attribution.
 - You may not use the content for commercial purposes.
 
-## Worked example
+## Example
 Acceptable: reusing a tolerance checklist in an internal training guide with attribution.
+
 Not acceptable: selling this content as part of a paid engineering handbook.
 
 ## References
