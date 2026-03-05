@@ -2,7 +2,9 @@
 General tolerances as defined by DIN ISO 2768 and BS EN 22768.
 
 ## Example Drawing Note
-> Unless otherwise specified, variations on dimensions without individual tolerance values are according to **DIN ISO 2768-mk**.
+```
+Unless otherwise specified, variations on dimensions without individual tolerance values are according to **DIN ISO 2768-mk**.
+```
 
 ## Linear Dimensions
 | From (mm) | To (mm) | f (fine) | m (medium) | c (coarse) | v (very coarse) |

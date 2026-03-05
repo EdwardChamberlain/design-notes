@@ -89,3 +89,13 @@
   color: var(--md-accent-bg-color);
 }
 
+/* Wrap long lines in code blocks */
+.md-typeset pre code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Keep inline code behaving normally */
+.md-typeset code:not(pre code) {
+  white-space: normal;
+}
