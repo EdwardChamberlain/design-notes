@@ -67,3 +67,25 @@
   overflow-x: auto;
   white-space: nowrap;
 }
+
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  text-align: center !important;
+  vertical-align: middle;
+}
+
+/* First column: slightly darker accent */
+.md-typeset table:not([class]) th:first-child,
+.md-typeset table:not([class]) td:first-child {
+  background-color: var(--md-accent-fg-color);
+  background-color: color-mix(in srgb, var(--md-accent-fg-color) 60%, #000 40%);
+  color: var(--md-accent-bg-color);
+  font-weight: 600;
+}
+
+/* First row: accent (takes precedence over first-column rule) */
+.md-typeset table:not([class]) thead tr:first-child > * {
+  background-color: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+}
+
