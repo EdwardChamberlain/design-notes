@@ -41,6 +41,7 @@ extra_css:
   - stylesheets/theme.css
   - stylesheets/fonts.css
   - stylesheets/extra.css
+  - stylesheets/images.css
   - stylesheets/codeblocks.css
   - stylesheets/tables.css
   - stylesheets/blockquotes.css

@@ -39,22 +39,3 @@
 .md-typeset h6 + * {
   margin-top: 0;
 }
-
-/* Center standalone content images by default unless an explicit align attribute is set */
-.md-typeset > img:not([align]),
-.md-typeset p > img:not([align]):only-child {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.md-typeset p > a:only-child:has(> img:not([align])) {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
-}
-
-.md-typeset p > a:only-child:has(> img:not([align])) > img {
-  display: block;
-}

@@ -1,0 +1,26 @@
+/* Images.css: Default sizing, centering, and spacing rules for standalone content images. */
+
+/* Center standalone content images by default unless an explicit align attribute is set */
+.md-typeset > img:not([align]),
+.md-typeset p > img:not([align]):only-child {
+  display: block;
+  max-width: min(75%, 100%);
+  margin-top: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.25rem;
+}
+
+.md-typeset p > a:only-child:has(> img:not([align])) {
+  display: block;
+  margin-top: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.25rem;
+  width: fit-content;
+}
+
+.md-typeset p > a:only-child:has(> img:not([align])) > img {
+  display: block;
+  max-width: min(75%, 100%);
+}
