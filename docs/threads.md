@@ -1,7 +1,7 @@
 # Threads
 
 ## External Threads
-![Placeholder](./assets/images/line_drawings/external_threads_dark_mode.png "External Thread Diagram")
+![External Thread](./assets/images/line_drawings/external_threads_dark_mode.png "External Thread Diagram")
 
 | Thread | Pitch<br>[mm] | A<br>[mm] | B<br>[mm] | R<br>[mm] | End Chamfer<br>[mm] | Clearance Drill<br>[mm] |
 |---|---:|---:|---:|---:|---:|---:|
@@ -18,7 +18,7 @@
 > BS:1936-2:1991
 
 ## Internal Threads
-![Placeholder](./assets/images/line_drawings/internal_threads_dark_mode.png "Internal Thread Diagram")
+![Internal Thread](./assets/images/line_drawings/internal_threads_dark_mode.png "Internal Thread Diagram")
 
 | Thread | Pitch<br>[mm] | Tap Drill<br>[mm] | Max Depth<br>[mm] |
 |---|---:|---:|---:|
