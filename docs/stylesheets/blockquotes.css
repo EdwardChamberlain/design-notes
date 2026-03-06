@@ -40,8 +40,7 @@
 }
 
 /* Keep source-note blockquotes tight under tables and Material table wrappers */
-.md-typeset table:not([class]) + blockquote,
-.md-typeset table[class*="table-hl-"] + blockquote,
+.md-typeset table + blockquote,
 .md-typeset .md-typeset__table + blockquote,
 .md-typeset .md-typeset__scrollwrap + blockquote {
   margin-top: 0;

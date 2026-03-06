@@ -85,4 +85,3 @@ Unless otherwise specified, variations on dimensions without individual toleranc
 | 0.1 | 0.2 | 0.5 |
 
 > DIN ISO 2768
-
