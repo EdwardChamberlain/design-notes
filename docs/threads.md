@@ -1,8 +1,7 @@
 # Threads
 
 ## External Threads
-![Placeholder](./assets/images/placeholder.png "Placeholder Image")
-> Placeholder Image
+![Placeholder](./assets/images/external_threads.png "External Thread Diagram")
 
 | Thread | Pitch<br>[mm] | A<br>[mm] | B<br>[mm] | R<br>[mm] | End Chamfer<br>[mm] | Clearance Drill<br>[mm] |
 |---|---:|---:|---:|---:|---:|---:|
@@ -19,8 +18,7 @@
 > BS:1936-2:1991
 
 ## Internal Threads
-![Placeholder](./assets/images/placeholder.png "Placeholder Image")
-> Placeholder Image
+![Placeholder](./assets/images/internal_threads.png "Internal Thread Diagram")
 
 | Thread | Pitch<br>[mm] | Tap Drill<br>[mm] | Max Depth<br>[mm] |
 |---|---:|---:|---:|
