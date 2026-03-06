@@ -1,37 +1,48 @@
-/* Tables.css: Responsive table layout, wrapper fixes, cell sizing, and highlight variants. */
+/* Tables.css: Base styling for all content tables plus utility classes for layout, dividers, and highlights. */
+/* Markdown table mixins: table-hl-no-row, table-hl-no-col, table-hl-row-2, table-hl-col-2, table-layout-auto, table-divider-cols, table-divider-rows. */
 
-/* Base table formatting for normal markdown tables and table-hl-* variants */
-.md-typeset table:not([class]),
-.md-typeset table[class*="table-hl-"] {
+/* ---- BASE CLASSES ---- */
+
+/* BASE: Core table formatting shared by all content tables. */
+.md-typeset table,
+.md-typeset .md-typeset__table table,
+.md-typeset .md-typeset__scrollwrap table {
   background-color: var(--md-default-bg-color);
   border: 0.05rem solid var(--md-typeset-table-color);
   border-radius: 0.1rem;
   display: table;
   font-size: 0.64rem;
   table-layout: fixed;
-  width: 100%;
+  min-width: 100%;
   max-width: 100%;
+  width: 100% !important;
   overflow: visible;
   white-space: normal;
 }
 
-/* Keep spacing after tables consistent with Material defaults */
-.md-typeset table:not([class]) + *,
-.md-typeset table[class*="table-hl-"] + *,
+/* BASE: Keep spacing after tables consistent with Material defaults. */
+.md-typeset table + *,
 .md-typeset .md-typeset__table + *,
 .md-typeset .md-typeset__scrollwrap + * {
   margin-top: 1.5em;
 }
 
-/* Remove extra bottom space from Material's responsive table wrappers */
-.md-typeset .md-typeset__scrollwrap > .md-typeset__table {
+/* BASE: Make Material's table wrappers span the content width for standard tables. */
+.md-typeset .md-typeset__table,
+.md-typeset .md-typeset__scrollwrap {
+  display: block;
+  width: 100%;
+}
+
+/* BASE: Remove extra bottom space from Material's responsive table wrappers. */
+.md-typeset .md-typeset__scrollwrap > .md-typeset__table,
+.md-typeset .md-typeset__table {
   display: block;
   margin-bottom: 0;
 }
 
-/* Cell sizing, borders, and centered content */
-.md-typeset table:not([class]) th,
-.md-typeset table[class*="table-hl-"] th {
+/* BASE: Apply shared cell sizing, borders, wrapping, and centered content. */
+.md-typeset table th {
   font-weight: 700;
   min-width: 0;
   padding: 0.4em 1rem;
@@ -40,8 +51,8 @@
   vertical-align: middle;
 }
 
-.md-typeset table:not([class]) td,
-.md-typeset table[class*="table-hl-"] td {
+/* BASE: Apply shared body-cell borders, sizing, wrapping, and centered content. */
+.md-typeset table td {
   border-top: 0.05rem solid var(--md-typeset-table-color);
   min-width: 0;
   padding: 0.4em 1rem;
@@ -50,42 +61,80 @@
   vertical-align: middle;
 }
 
-/* Row hover affordance */
-.md-typeset table:not([class]) tbody tr,
-.md-typeset table[class*="table-hl-"] tbody tr {
+/* BASE: Keep the subtle row hover affordance on all tables. */
+.md-typeset table tbody tr {
   transition: background-color 125ms;
 }
 
-.md-typeset table:not([class]) tbody tr:hover,
-.md-typeset table[class*="table-hl-"] tbody tr:hover {
+.md-typeset table tbody tr:hover {
   background-color: var(--md-typeset-table-color--light);
   box-shadow: 0 0.05rem 0 var(--md-default-bg-color) inset;
 }
 
-/* First column highlight (default), disabled by table-hl-no-col and table-hl-none */
-.md-typeset table:not(.table-hl-no-col):not(.table-hl-none) th:first-child,
-.md-typeset table:not(.table-hl-no-col):not(.table-hl-none) td:first-child {
+/* BASE: Highlight the first column by default unless an opt-out class disables it. */
+.md-typeset table:not(.table-hl-no-col) th:first-child,
+.md-typeset table:not(.table-hl-no-col) td:first-child {
   background-color: color-mix(in srgb, var(--md-accent-fg-color) 60%, #000 40%);
   color: var(--md-accent-bg-color);
   font-weight: 600;
 }
 
-/* Optional second column highlight (disabled by table-hl-no-col and table-hl-none) */
-.md-typeset table.table-hl-col-2:not(.table-hl-no-col):not(.table-hl-none) th:nth-child(2),
-.md-typeset table.table-hl-col-2:not(.table-hl-no-col):not(.table-hl-none) td:nth-child(2) {
-  background-color: color-mix(in srgb, var(--md-accent-fg-color) 60%, #000 40%);
-  color: var(--md-accent-bg-color);
-  font-weight: 600;
-}
-
-/* First row highlight (overrides column highlights at intersections) */
-.md-typeset table:not(.table-hl-none) thead tr:first-child > * {
+/* BASE: Highlight the first row by default unless an opt-out class disables it. */
+.md-typeset table:not(.table-hl-no-row) thead tr:first-child > * {
   background-color: var(--md-accent-fg-color) !important;
   color: var(--md-accent-bg-color) !important;
 }
 
-/* Optional second row highlight (also overrides column highlights) */
-.md-typeset table.table-hl-row-2:not(.table-hl-none) tbody tr:first-child > * {
+/* ---- OPTIONAL MIXINS ---- */
+
+/* OPTIONAL: Let selected tables size columns by content while staying left-aligned in the content area. */
+.md-typeset table.table-layout-auto,
+.md-typeset .md-typeset__table table.table-layout-auto,
+.md-typeset .md-typeset__scrollwrap table.table-layout-auto {
+  margin-left: 0;
+  margin-right: 0;
+  min-width: 0;
+  table-layout: auto;
+  width: auto !important;
+}
+
+/* OPTIONAL: Give auto-layout tables slightly more horizontal breathing room. */
+.md-typeset table.table-layout-auto th,
+.md-typeset table.table-layout-auto td {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+/* OPTIONAL: Add vertical dividers to selected tables. */
+.md-typeset table.table-divider-cols th,
+.md-typeset table.table-divider-cols td {
+  border-left: 0.05rem solid var(--md-typeset-table-color);
+}
+
+.md-typeset table.table-divider-cols th:first-child,
+.md-typeset table.table-divider-cols td:first-child {
+  border-left: 0;
+}
+
+/* OPTIONAL: Add horizontal dividers to selected tables, including below the header row. */
+.md-typeset table.table-divider-rows thead tr:last-child > * {
+  border-bottom: 0.05rem solid var(--md-typeset-table-color);
+}
+
+.md-typeset table.table-divider-rows tbody tr > * {
+  border-top: 0.05rem solid var(--md-typeset-table-color);
+}
+
+/* OPTIONAL: Highlight the second column when requested and not disabled by the column opt-out class. */
+.md-typeset table.table-hl-col-2:not(.table-hl-no-col) th:nth-child(2),
+.md-typeset table.table-hl-col-2:not(.table-hl-no-col) td:nth-child(2) {
+  background-color: color-mix(in srgb, var(--md-accent-fg-color) 60%, #000 40%);
+  color: var(--md-accent-bg-color);
+  font-weight: 600;
+}
+
+/* OPTIONAL: Highlight the second row when requested and not disabled by the row opt-out class. */
+.md-typeset table.table-hl-row-2:not(.table-hl-no-row) tbody tr:first-child > * {
   background-color: var(--md-accent-fg-color) !important;
   color: var(--md-accent-bg-color) !important;
 }

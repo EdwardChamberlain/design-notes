@@ -2,7 +2,7 @@
 
 ![Broaching](./assets/images/line_drawings/broaching_dark_mode.png)
 
-| Broach Size A (mm) | Tolerance A (mm) | Drill Size B (mm) | Broach Depth C (mm) | Drill Depth Min D Min (mm) |
+| Broach Size A<br>[mm] | Tolerance A<br>[mm] | Drill Size B<br>[mm] | Broach Depth C<br>[mm] | Drill Depth D Min<br>[mm] |
 |---:|---|---|---|---:|
 | 1.5 | 1.5 / 1.56 | Ø1.55 +/-0.05 | 1.5 +/-0.1 | 2.25 |
 | 2 | 2.0 / 2.07 | Ø2.05 +/-0.05 | 2.0 +/-0.1 | 3.00 |

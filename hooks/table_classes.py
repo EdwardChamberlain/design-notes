@@ -10,10 +10,13 @@ TABLE_CLASS_MARKER_RE = re.compile(
     flags=re.IGNORECASE,
 )
 ALLOWED_TABLE_CLASSES = {
-    "table-hl-none",
+    "table-hl-no-row",
     "table-hl-no-col",
     "table-hl-row-2",
     "table-hl-col-2",
+    "table-layout-auto",
+    "table-divider-cols",
+    "table-divider-rows",
 }
 
 
