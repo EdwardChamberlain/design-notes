@@ -4,12 +4,13 @@
   background-color: var(--md-default-bg-color);
   border: 0.05rem solid var(--md-typeset-table-color);
   border-radius: 0.1rem;
-  display: inline-block;
+  display: table;
   font-size: 0.64rem;
+  table-layout: fixed;
+  width: 100%;
   max-width: 100%;
-  overflow: auto;
-  touch-action: auto;
-  white-space: nowrap;
+  overflow: visible;
+  white-space: normal;
 }
 
 /* Keep spacing after tables consistent with Material defaults */
@@ -28,8 +29,9 @@
 .md-typeset table:not([class]) th,
 .md-typeset table[class*="table-hl-"] th {
   font-weight: 700;
-  min-width: 5rem;
+  min-width: 0;
   padding: 0.9375em 1.25em;
+  overflow-wrap: anywhere;
   text-align: center !important;
   vertical-align: middle;
 }
@@ -37,7 +39,9 @@
 .md-typeset table:not([class]) td,
 .md-typeset table[class*="table-hl-"] td {
   border-top: 0.05rem solid var(--md-typeset-table-color);
+  min-width: 0;
   padding: 0.9375em 1.25em;
+  overflow-wrap: anywhere;
   text-align: center !important;
   vertical-align: middle;
 }
