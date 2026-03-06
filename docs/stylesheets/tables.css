@@ -15,13 +15,23 @@
 
 /* Keep spacing after tables consistent with Material defaults */
 .md-typeset table:not([class]) + *,
-.md-typeset table[class*="table-hl-"] + * {
+.md-typeset table[class*="table-hl-"] + *,
+.md-typeset .md-typeset__table + *,
+.md-typeset .md-typeset__scrollwrap + * {
   margin-top: 1.5em;
 }
 
-/* Allow source-note blockquotes to sit directly under tables */
+/* Remove extra bottom space from Material's responsive table wrappers */
+.md-typeset .md-typeset__scrollwrap > .md-typeset__table {
+  display: block;
+  margin-bottom: 0;
+}
+
+/* Allow source-note blockquotes to sit directly under tables and table wrappers */
 .md-typeset table:not([class]) + blockquote,
-.md-typeset table[class*="table-hl-"] + blockquote {
+.md-typeset table[class*="table-hl-"] + blockquote,
+.md-typeset .md-typeset__table + blockquote,
+.md-typeset .md-typeset__scrollwrap + blockquote {
   margin-top: 0;
 }
 
