@@ -18,6 +18,8 @@ except ImportError:  # pragma: no cover - runtime dependency guard
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 SOURCE_DIR = ROOT_DIR / "docs/assets/images/line_drawings"
+OVERWRITE = True
+ALPHA_CROP_THRESHOLD = 8
 
 
 def output_path_for(input_path: Path, suffix: str) -> Path:
@@ -32,7 +34,16 @@ def build_alpha_mask(image: Image.Image) -> Image.Image:
     white_bg = Image.new("RGBA", rgba.size, (255, 255, 255, 255))
     flattened = Image.alpha_composite(white_bg, rgba)
     grayscale = flattened.convert("L")
-    return ImageChops.invert(grayscale)
+    alpha = ImageChops.invert(grayscale)
+    return alpha.point(lambda value: 0 if value < ALPHA_CROP_THRESHOLD else value)
+
+
+def crop_to_content(image: Image.Image) -> Image.Image:
+    alpha = image.getchannel("A")
+    bounds = alpha.getbbox()
+    if bounds is None:
+        return image
+    return image.crop(bounds)
 
 
 def convert_image(input_path: Path, output_path: Path, rgb: tuple[int, int, int]) -> None:
@@ -40,7 +51,7 @@ def convert_image(input_path: Path, output_path: Path, rgb: tuple[int, int, int]
         alpha = build_alpha_mask(image)
         result = Image.new("RGBA", image.size, (*rgb, 255))
         result.putalpha(alpha)
-        result.save(output_path)
+        crop_to_content(result).save(output_path)
 
 
 def source_images(directory: Path) -> list[Path]:
@@ -73,11 +84,15 @@ def main() -> int:
         )
 
         for output_path, rgb in outputs:
-            if output_path.exists():
+            existed_before = output_path.exists()
+            if existed_before and not OVERWRITE:
                 print(f"Skipped {output_path} (already exists)")
                 continue
             convert_image(input_path, output_path, rgb)
-            print(f"Wrote {output_path}")
+            if existed_before and OVERWRITE:
+                print(f"Overwrote {output_path}")
+            else:
+                print(f"Wrote {output_path}")
 
     return 0
 
