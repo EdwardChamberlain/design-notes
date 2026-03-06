@@ -1,0 +1,48 @@
+/* Blockquotes.css: Compact blockquote styling and spacing rules for inline citations and notes. */
+
+/* Make blockquotes read as compact source notes */
+.md-typeset blockquote {
+  font-size: 0.72rem;
+  line-height: 1.45;
+  margin-top: 0 !important;
+  margin-bottom: 0.75rem;
+  padding-block: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.md-typeset blockquote > :first-child {
+  margin-top: 0;
+}
+
+.md-typeset blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.md-typeset blockquote p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Pull blockquotes tight to the element above, regardless of content type */
+.md-typeset :where(
+  p,
+  table,
+  ul,
+  ol,
+  dl,
+  pre,
+  figure,
+  .md-typeset__table,
+  .md-typeset__scrollwrap
+):has(+ blockquote) {
+  margin-bottom: 0 !important;
+}
+
+/* Keep source-note blockquotes tight under tables and Material table wrappers */
+.md-typeset table:not([class]) + blockquote,
+.md-typeset table[class*="table-hl-"] + blockquote,
+.md-typeset .md-typeset__table + blockquote,
+.md-typeset .md-typeset__scrollwrap + blockquote {
+  margin-top: 0;
+}

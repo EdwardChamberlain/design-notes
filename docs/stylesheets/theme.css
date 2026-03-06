@@ -1,0 +1,15 @@
+/* Theme.css: Site palette tokens and theme-specific visual overrides. */
+
+[data-md-color-scheme="slate"] {
+  /* Keep foreground highly readable while giving the page a softer blue-grey body */
+  --md-default-bg-color: #272727;
+  --md-default-bg-color--light: #272727;
+  --md-default-bg-color--lighter: #354153;
+  --md-default-bg-color--lightest: #404f65;
+  --md-default-fg-color: #e6edf7;
+}
+
+/* Improve H1 contrast in dark theme */
+[data-md-color-scheme="slate"] .md-typeset h1 {
+  color: #ffffff;
+}

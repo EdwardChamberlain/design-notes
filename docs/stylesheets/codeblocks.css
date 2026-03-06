@@ -1,0 +1,17 @@
+/* Codeblocks.css: Typography and wrapping behavior for fenced code blocks and inline code. */
+
+/* Compact monospace text inside fenced code blocks */
+.md-typeset pre > code {
+  font-size: 0.8rem;
+}
+
+/* Wrap long lines in code blocks */
+.md-typeset pre code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Keep inline code behaving normally */
+.md-typeset code:not(pre code) {
+  white-space: normal;
+}

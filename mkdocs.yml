@@ -38,8 +38,12 @@ markdown_extensions:
       generic: true
 
 extra_css:
+  - stylesheets/theme.css
+  - stylesheets/fonts.css
   - stylesheets/extra.css
+  - stylesheets/codeblocks.css
   - stylesheets/tables.css
+  - stylesheets/blockquotes.css
 
 extra_javascript:
   - javascripts/mathjax.js

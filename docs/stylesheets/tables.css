@@ -1,3 +1,5 @@
+/* Tables.css: Responsive table layout, wrapper fixes, cell sizing, and highlight variants. */
+
 /* Base table formatting for normal markdown tables and table-hl-* variants */
 .md-typeset table:not([class]),
 .md-typeset table[class*="table-hl-"] {
@@ -25,14 +27,6 @@
 .md-typeset .md-typeset__scrollwrap > .md-typeset__table {
   display: block;
   margin-bottom: 0;
-}
-
-/* Allow source-note blockquotes to sit directly under tables and table wrappers */
-.md-typeset table:not([class]) + blockquote,
-.md-typeset table[class*="table-hl-"] + blockquote,
-.md-typeset .md-typeset__table + blockquote,
-.md-typeset .md-typeset__scrollwrap + blockquote {
-  margin-top: 0;
 }
 
 /* Cell sizing, borders, and centered content */

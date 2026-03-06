@@ -1,0 +1,23 @@
+/* Fonts.css: Typography adjustments for body copy, headings, and general text rhythm. */
+
+.md-typeset {
+  /* Slightly increased reading line-height for body content */
+  line-height: 1.7;
+}
+
+/* Tighten heading letter spacing for a cleaner display feel */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  letter-spacing: -0.01em;
+}
+
+/* Make all heading levels bold */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-weight: 700;
+}

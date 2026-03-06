@@ -1,43 +1,18 @@
-[data-md-color-scheme="slate"] {
-  /* Keep foreground highly readable while giving the page a softer blue-grey body */
-  --md-default-bg-color: #272727;
-  --md-default-bg-color--light: #272727;
-  --md-default-bg-color--lighter: #354153;
-  --md-default-bg-color--lightest: #404f65;
-  --md-default-fg-color: #e6edf7;
-}
+/* Extra.css: General content layout rules and default image alignment outside specialized stylesheets. */
 
-.md-typeset {
-  /* Slightly increased reading line-height for body content */
-  line-height: 1.7;
-}
-
-/* Tighten heading letter spacing for a cleaner display feel */
-.md-typeset h1,
-.md-typeset h2,
-.md-typeset h3 {
-  letter-spacing: -0.01em;
-}
-
-/* Make all heading levels bold and remove trailing space below headings */
+/* Remove trailing space below headings */
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3,
 .md-typeset h4,
 .md-typeset h5,
 .md-typeset h6 {
-  font-weight: 700;
   margin-bottom: 0;
 }
 
 /* Keep page title flush with the top of the content area */
 .md-typeset h1 {
   margin-top: 0;
-}
-
-/* Improve H1 contrast in dark theme */
-[data-md-color-scheme="slate"] .md-typeset h1 {
-  color: #ffffff;
 }
 
 /* Heading lead spacing by level */
@@ -82,59 +57,4 @@
 
 .md-typeset p > a:only-child:has(> img:not([align])) > img {
   display: block;
-}
-
-/* Make blockquotes read as compact source notes */
-.md-typeset blockquote {
-  font-size: 0.72rem;
-  line-height: 1.45;
-  margin-top: 0 !important;
-  margin-bottom: 0.75rem;
-  padding-block: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-.md-typeset blockquote > :first-child {
-  margin-top: 0;
-}
-
-.md-typeset blockquote > :last-child {
-  margin-bottom: 0;
-}
-
-.md-typeset blockquote p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/* Pull blockquotes tight to the element above, regardless of content type */
-.md-typeset :where(
-  p,
-  table,
-  ul,
-  ol,
-  dl,
-  pre,
-  figure,
-  .md-typeset__table,
-  .md-typeset__scrollwrap
-):has(+ blockquote) {
-  margin-bottom: 0 !important;
-}
-
-/* Compact monospace text inside fenced code blocks */
-.md-typeset pre > code {
-  font-size: 0.8rem;
-}
-
-/* Wrap long lines in code blocks */
-.md-typeset pre code {
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-/* Keep inline code behaving normally */
-.md-typeset code:not(pre code) {
-  white-space: normal;
 }
