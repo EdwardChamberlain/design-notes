@@ -8,7 +8,7 @@ Unless otherwise specified, variations on dimensions without individual toleranc
 
 ## Linear Dimensions
 <!-- table-class: table-hl-col-2 -->
-| From [mm] | To [mm] | f (fine) | m (medium) | c (coarse) | v (very coarse) |
+| From<br>[mm] | To<br>[mm] | f<br>(fine) | m<br>(medium) | c<br>(coarse) | v<br>(very coarse) |
 | --- | --- | --- | --- | --- | --- |
 | 0.5 | 3 | ± 0.05 | ± 0.1 | ± 0.2 | - |
 | 3 | 6 | ± 0.05 | ± 0.1 | ± 0.3 | ± 0.5 |
@@ -23,17 +23,16 @@ Unless otherwise specified, variations on dimensions without individual toleranc
 
 ## External Radius and Chamfer Heights
 <!-- table-class: table-hl-col-2 -->
-| From [mm] | To [mm] | f (fine) | m (medium) | c (coarse) | v (very coarse) |
+| From<br>[mm] | To<br>[mm] | f<br>(fine) | m<br>(medium) | c<br>(coarse) | v<br>(very coarse) |
 | --- | --- | --- | --- | --- | --- |
-| 0.5 | 3 | ± 0.2 | ± 0.2 | ± 0.4 | ± 0.4 |
-| 3 | 6 | ± 0.5 | ± 0.5 | ± 1.0 | ± 1.0 |
+| 0.5 | 3 | ± 0.2 | ± 0.5 | ± 1.0 | ± 1.0 |
 | 6 | and above | ± 1.0 | ± 1.0 | ± 2.0 | ± 2.0 |
 
 > DIN ISO 2768
 
 ## Angular Dimensions
 <!-- table-class: table-hl-col-2 -->
-| From [mm] | To [mm] | f (fine) | m (medium) | c (coarse) | v (very coarse) |
+| From<br>[mm] | To<br>[mm] | f<br>(fine) | m<br>(medium) | c<br>(coarse) | v<br>(very coarse) |
 | --- | --- | --- | --- | --- | --- |
 | 0 | 10 | ± 1.000° | ± 1.000° | ± 1.500° | ± 3.000° |
 | 10 | 50 | ± 0.500° | ± 0.500° | ± 1.000° | ± 2.000° |
@@ -45,7 +44,7 @@ Unless otherwise specified, variations on dimensions without individual toleranc
 
 ## Straightness and Flatness
 <!-- table-class: table-hl-col-2 -->
-| From [mm] | To [mm] | H | K | L |
+| From<br>[mm] | To<br>[mm] | H | K | L |
 | --- | --- | --- | --- | --- |
 | 0 | 10 | 0.02 | 0.05 | 0.1 |
 | 10 | 30 | 0.05 | 0.1 | 0.2 |
@@ -58,7 +57,7 @@ Unless otherwise specified, variations on dimensions without individual toleranc
 
 ## Perpendicularity
 <!-- table-class: table-hl-col-2 -->
-| From [mm] | To [mm] | H | K | L |
+| From<br>[mm] | To<br>[mm] | H | K | L |
 | --- | --- | --- | --- | --- |
 | 0 | 100 | 0.2 | 0.4 | 0.6 |
 | 100 | 300 | 0.3 | 0.6 | 1.0 |
@@ -69,7 +68,7 @@ Unless otherwise specified, variations on dimensions without individual toleranc
 
 ## Symmetry
 <!-- table-class: table-hl-col-2 -->
-| From [mm] | To [mm] | H | K | L |
+| From<br>[mm] | To<br>[mm] | H | K | L |
 | --- | --- | --- | --- | --- |
 | 0 | 100 | 0.5 | 0.6 | 0.6 |
 | 100 | 300 | 0.5 | 0.6 | 1.0 |
