@@ -1,6 +1,6 @@
 # Broaching
 
-![Broaching](./assets/images/line_drawings/broaching_dark_mode.png)
+![Broaching](../assets/images/line_drawings/broaching_dark_mode.png)
 
 | Broach Size A<br>[mm] | Tolerance A<br>[mm] | Drill Size B<br>[mm] | Broach Depth C<br>[mm] | Drill Depth D Min<br>[mm] |
 |---:|---|---|---|---:|

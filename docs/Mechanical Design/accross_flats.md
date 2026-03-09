@@ -1,6 +1,6 @@
 # Across Flats
 
-![Nut](./assets/images/line_drawings/nut_af_dark_mode.png)
+![Nut](../assets/images/line_drawings/nut_af_dark_mode.png)
 
 | Nominal Nut Thread | Across Flats Min [mm] | Across Flats Nominal [mm] | Across Flats Max [mm] | Across Flats ± Tolerance [mm] | Thickness [mm] |
 |---|---:|---:|---:|---:|---:|

@@ -1,6 +1,6 @@
 # Bolt Head Sizes
 ## Cap Head
-![Cap Head Bolt](./assets/images/line_drawings/bolt_head_cap_dark_mode.png)
+![Cap Head Bolt](../assets/images/line_drawings/bolt_head_cap_dark_mode.png)
 
 | Thread | Head Height H [mm] | Head Diameter A [mm] |
 |---|---:|---:|
@@ -20,7 +20,7 @@
 > Roymech / Accu
 
 ## Countersunk Head
-![CSK Head Bolt](./assets/images/line_drawings/bolt_head_csk_dark_mode.png)
+![CSK Head Bolt](../assets/images/line_drawings/bolt_head_csk_dark_mode.png)
 
 | Thread | Head Diameter A [mm] | Head Height H [mm] |
 |---|---:|---:|
