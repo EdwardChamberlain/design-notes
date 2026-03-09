@@ -61,6 +61,12 @@
   vertical-align: middle;
 }
 
+/* BASE: Override Material's more specific default top-alignment on standard Markdown tables. */
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  vertical-align: middle;
+}
+
 /* BASE: Keep the subtle row hover affordance on all tables. */
 .md-typeset table tbody tr {
   transition: background-color 125ms;
