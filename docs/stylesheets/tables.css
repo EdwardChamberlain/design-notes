@@ -1,5 +1,5 @@
 /* Tables.css: Base styling for all content tables plus utility classes for layout, dividers, and highlights. */
-/* Markdown table mixins: table-hl-no-row, table-hl-no-col, table-hl-row-2, table-hl-col-2, table-layout-auto, table-divider-cols, table-divider-rows. */
+/* Markdown table mixins: table-hl-no-row, table-hl-no-col, table-hl-row-2, table-hl-col-2, table-layout-auto, table-width-full, table-divider-cols, table-divider-rows. */
 
 /* ---- BASE CLASSES ---- */
 
@@ -109,6 +109,15 @@
 .md-typeset table.table-layout-auto td {
   padding-left: 0.4rem;
   padding-right: 0.4rem;
+}
+
+/* OPTIONAL: Use with table-layout-auto to keep browser-sized columns while filling the available width. */
+.md-typeset table.table-layout-auto.table-width-full,
+.md-typeset .md-typeset__table table.table-layout-auto.table-width-full,
+.md-typeset .md-typeset__scrollwrap table.table-layout-auto.table-width-full {
+  min-width: 100%;
+  max-width: 100%;
+  width: 100% !important;
 }
 
 /* OPTIONAL: Add vertical dividers to selected tables. */

@@ -15,6 +15,7 @@ ALLOWED_TABLE_CLASSES = {
     "table-hl-row-2",
     "table-hl-col-2",
     "table-layout-auto",
+    "table-width-full",
     "table-divider-cols",
     "table-divider-rows",
 }

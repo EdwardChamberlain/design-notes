@@ -13,10 +13,12 @@
 
 > OmniCalculator
 
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
 ## Second Moment of Area
 
-<!-- table-class: table-layout-auto -->
-| Title | Image | Formula / Formulas |
+<!-- table-class: table-layout-auto table-width-full -->
+| Geometry | Diagram | Formula / Formulas |
 |---|---|---|
 | Rectangle | ![](./assets/images/line_drawings/rectangle_section_dark_mode.png) | $I_y = \dfrac{w h^3}{12}$<br>$I_z = \dfrac{h w^3}{12}$ |
 | Circular hollow section | ![](./assets/images/line_drawings/annulus_section_dark_mode.png) | $I_y = \dfrac{(D^4 - d^4)\cdot \pi}{64}$<br>$I_z = \dfrac{(D^4 - d^4)\cdot \pi}{64}$ |
