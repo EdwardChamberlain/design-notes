@@ -10,8 +10,11 @@
   background-color: var(--md-default-bg-color);
   border: 0.05rem solid var(--md-typeset-table-color);
   border-radius: 0.1rem;
+  box-sizing: border-box;
   display: table;
   font-size: 0.64rem;
+  margin-left: 0;
+  margin-right: 0;
   table-layout: fixed;
   min-width: 100%;
   max-width: 100%;
@@ -31,6 +34,11 @@
 .md-typeset .md-typeset__table,
 .md-typeset .md-typeset__scrollwrap {
   display: block;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
   width: 100%;
 }
 
@@ -39,6 +47,14 @@
 .md-typeset .md-typeset__table {
   display: block;
   margin-bottom: 0;
+}
+
+/* BASE: Override Material's classless-table responsive defaults so plain markdown tables use the shared base table sizing. */
+.md-typeset table:not([class]),
+.md-typeset .md-typeset__table table:not([class]),
+.md-typeset .md-typeset__scrollwrap table:not([class]) {
+  display: table;
+  overflow: visible;
 }
 
 /* BASE: Apply shared cell sizing, borders, wrapping, and centered content. */
