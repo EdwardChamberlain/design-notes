@@ -3,6 +3,7 @@
 .md-typeset {
   /* Slightly increased reading line-height for body content */
   line-height: 1.7;
+  text-align: justify;
 }
 
 /* Tighten heading letter spacing for a cleaner display feel */
@@ -20,4 +21,5 @@
 .md-typeset h5,
 .md-typeset h6 {
   font-weight: 700;
+  text-align: left;
 }
