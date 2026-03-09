@@ -2,7 +2,7 @@
 
 ## Beam Deflection Formula
 
-| Beam and load case | Diagram | Maximum beam deflection |
+| Load case | Diagram | Maximum beam deflection |
 |---|---|---|
 | Cantilever with point load at free end | ![Cantilever with point load at free end](./assets/images/line_drawings/cantilever_point_load_end_2_clean_dark_mode.png) | $\delta_{\max} = \dfrac{PL^3}{3EI}$ |
 | Cantilever with point load at distance \(a\) from the fixed end | ![Cantilever with point load at distance \(a\) from the fixed end](./assets/images/line_drawings/cantilever_point_load_offset_2_clean_dark_mode.png) | $\delta_{\max} = \dfrac{Pa^2(3L-a)}{6EI}$ |
@@ -15,6 +15,13 @@
 
 ## Second Moment of Area
 
-![Second Moment of Area](./assets/images/line_drawings/moment-of-area-for-different-cross-sections_dark_mode.png)
+<!-- table-class: table-layout-auto -->
+| Title | Image | Formula / Formulas |
+|---|---|---|
+| Rectangle | ![](./assets/images/line_drawings/rectangle_section_dark_mode.png) | $I_y = \dfrac{w h^3}{12}$<br>$I_z = \dfrac{h w^3}{12}$ |
+| Circular hollow section | ![](./assets/images/line_drawings/annulus_section_dark_mode.png) | $I_y = \dfrac{(D^4 - d^4)\cdot \pi}{64}$<br>$I_z = \dfrac{(D^4 - d^4)\cdot \pi}{64}$ |
+| I-section | ![](./assets/images/line_drawings/i_section_dark_mode.png) | $I_y = \dfrac{w h^3}{12} - \dfrac{(w - t_w)\cdot (h - 2t_w)^3}{12}$<br>$I_z = \dfrac{h w^3}{12} - \dfrac{(w - t_w)^3 \cdot (h - 2t_w)}{12}$ |
+| Rectangular hollow section | ![](./assets/images/line_drawings/rhs_section_dark_mode.png) | $I_y = \dfrac{W H^3 - w h^3}{12}$<br>$I_z = \dfrac{H W^3 - h w^3}{12}$ |
+| Circle | ![](./assets/images/line_drawings/circle_section_dark_mode.png) | $I_y = \dfrac{\pi D^4}{64}$<br>$I_z = \dfrac{\pi D^4}{64}$ |
 
 > structuralbasics.com
