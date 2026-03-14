@@ -1,6 +1,6 @@
 # Python Style Guide
 
-[Download the Python style guide](../assets/documents/python_style_guide.md){:download}
+[Download the Python style guide](../assets/documents/python_style_guide.txt){:download="python_style_guide.md"}
 
 This page mirrors the downloadable Python style guide for quick reference. You can download it as a Markdown file, add it to your workspace, and use it to guide AI-generated code and docstring formatting.
 
