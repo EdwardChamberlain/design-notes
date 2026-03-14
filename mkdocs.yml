@@ -27,6 +27,7 @@ hooks:
 
 markdown_extensions:
   - tables
+  - attr_list
   - toc:
       permalink: true
   - admonition
