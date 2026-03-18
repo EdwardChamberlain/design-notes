@@ -1,4 +1,4 @@
-"""MkDocs hook for applying markdown table classes and rowspan markers."""
+"""MkDocs hook for applying markdown table classes and table merge markers."""
 
 from __future__ import annotations
 
@@ -23,9 +23,18 @@ ROWSPAN_UP_RE = re.compile(
     r"^\s*(?:\[\[ROWSPAN-UP\]\]|<(?:rowspan-up|colspan-up)\s*/?>\s*(?:</(?:rowspan-up|colspan-up)>\s*)?)$",
     flags=re.IGNORECASE | re.DOTALL,
 )
+COLSPAN_LEFT_RE = re.compile(
+    r"^\s*(?:\[\[COLSPAN-LEFT\]\]|<(?:colspan-left|rowspan-left)\s*/?>\s*(?:</(?:colspan-left|rowspan-left)>\s*)?)$",
+    flags=re.IGNORECASE | re.DOTALL,
+)
 ROWSPAN_ATTR_RE = re.compile(r'\srowspan="(?P<value>\d+)"', flags=re.IGNORECASE)
-ROWSPAN_MARKDOWN_RE = re.compile(r"<(?:rowspan-up|colspan-up)\s*/?>", flags=re.IGNORECASE)
+COLSPAN_ATTR_RE = re.compile(r'\scolspan="(?P<value>\d+)"', flags=re.IGNORECASE)
+MERGE_MARKDOWN_RE = re.compile(
+    r"<(?P<name>rowspan-up|colspan-up|colspan-left|rowspan-left)\s*/?>",
+    flags=re.IGNORECASE,
+)
 ROWSPAN_SENTINEL = "[[ROWSPAN-UP]]"
+COLSPAN_LEFT_SENTINEL = "[[COLSPAN-LEFT]]"
 ALLOWED_TABLE_CLASSES = {
     "table-hl-no-row",
     "table-hl-no-col",
@@ -44,23 +53,30 @@ class TableCell:
     attrs: str
     content: str
     rowspan: int = 1
+    colspan: int = 1
 
     @classmethod
     def from_match(cls, match: re.Match[str]) -> "TableCell":
         attrs = match.group("attrs")
         rowspan_match = ROWSPAN_ATTR_RE.search(attrs)
+        colspan_match = COLSPAN_ATTR_RE.search(attrs)
         rowspan = int(rowspan_match.group("value")) if rowspan_match else 1
+        colspan = int(colspan_match.group("value")) if colspan_match else 1
         return cls(
             tag=match.group("tag"),
             attrs=attrs,
             content=match.group("content"),
             rowspan=rowspan,
+            colspan=colspan,
         )
 
     def render(self) -> str:
         attrs = ROWSPAN_ATTR_RE.sub("", self.attrs)
+        attrs = COLSPAN_ATTR_RE.sub("", attrs)
         if self.rowspan > 1:
             attrs = f'{attrs} rowspan="{self.rowspan}"'
+        if self.colspan > 1:
+            attrs = f'{attrs} colspan="{self.colspan}"'
         return f"<{self.tag}{attrs}>{self.content}</{self.tag}>"
 
 
@@ -114,6 +130,10 @@ def _apply_rowspan_markers(table_html: str) -> str:
                 if anchor is not None:
                     anchor.rowspan += 1
                     continue
+            elif COLSPAN_LEFT_RE.fullmatch(cell.content):
+                if rendered_cells:
+                    rendered_cells[-1].colspan += 1
+                    continue
             else:
                 anchors[index] = cell
 
@@ -135,9 +155,15 @@ def _apply_rowspan_markers(table_html: str) -> str:
 
 
 def on_page_markdown(markdown: str, **kwargs) -> str:
-    """Preserve rowspan markers through Markdown parsing."""
+    """Preserve merge markers through Markdown parsing."""
 
-    return ROWSPAN_MARKDOWN_RE.sub(ROWSPAN_SENTINEL, markdown)
+    def _replace(match: re.Match[str]) -> str:
+        name = match.group("name").lower()
+        if name in {"rowspan-up", "colspan-up"}:
+            return ROWSPAN_SENTINEL
+        return COLSPAN_LEFT_SENTINEL
+
+    return MERGE_MARKDOWN_RE.sub(_replace, markdown)
 
 
 def on_page_content(html: str, **kwargs) -> str:
