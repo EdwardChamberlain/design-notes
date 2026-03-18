@@ -93,9 +93,8 @@
   box-shadow: 0 0.05rem 0 var(--md-default-bg-color) inset;
 }
 
-/* BASE: Highlight the first column by default unless an opt-out class disables it. */
-.md-typeset table:not(.table-hl-no-col) th:first-child,
-.md-typeset table:not(.table-hl-no-col) td:first-child {
+/* BASE: Highlight the logical first column by default unless an opt-out class disables it. */
+.md-typeset table:not(.table-hl-no-col) .table-col-1 {
   background-color: color-mix(in srgb, var(--md-accent-fg-color) 60%, #000 40%);
   color: var(--md-accent-bg-color);
   font-weight: 600;

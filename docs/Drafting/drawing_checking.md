@@ -1,6 +1,6 @@
 # Drawing Checking Workflow
 
-<!-- table-class: table-layout-auto table-width-full table-divider-cols table-divider-rows table-hl-no-col -->
+<!-- table-class: table-layout-auto table-width-full table-divider-cols table-divider-rows -->
 | Section | Check Item | Status |
 |---|---|---|
 | Model | No Model Errors | &nbsp; |

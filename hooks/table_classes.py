@@ -29,6 +29,7 @@ COLSPAN_LEFT_RE = re.compile(
 )
 ROWSPAN_ATTR_RE = re.compile(r'\srowspan="(?P<value>\d+)"', flags=re.IGNORECASE)
 COLSPAN_ATTR_RE = re.compile(r'\scolspan="(?P<value>\d+)"', flags=re.IGNORECASE)
+CLASS_ATTR_RE = re.compile(r'class="(?P<value>[^"]*)"', flags=re.IGNORECASE)
 MERGE_MARKDOWN_RE = re.compile(
     r"<(?P<name>rowspan-up|colspan-up|colspan-left|rowspan-left)\s*/?>",
     flags=re.IGNORECASE,
@@ -54,6 +55,7 @@ class TableCell:
     content: str
     rowspan: int = 1
     colspan: int = 1
+    logical_col: int | None = None
 
     @classmethod
     def from_match(cls, match: re.Match[str]) -> "TableCell":
@@ -73,6 +75,8 @@ class TableCell:
     def render(self) -> str:
         attrs = ROWSPAN_ATTR_RE.sub("", self.attrs)
         attrs = COLSPAN_ATTR_RE.sub("", attrs)
+        if self.logical_col == 1:
+            attrs = _append_class(attrs, "table-col-1")
         if self.rowspan > 1:
             attrs = f'{attrs} rowspan="{self.rowspan}"'
         if self.colspan > 1:
@@ -93,6 +97,20 @@ def _append_classes_to_table(table_tag: str, classes: list[str]) -> str:
             count=1,
         )
     return table_tag.replace("<table", f'<table class="{classes_str}"', 1)
+
+
+def _append_class(attrs: str, class_name: str) -> str:
+    class_match = CLASS_ATTR_RE.search(attrs)
+    if class_match:
+        classes = class_match.group("value").split()
+        if class_name in classes:
+            return attrs
+        return CLASS_ATTR_RE.sub(
+            f'class="{class_match.group("value")} {class_name}"',
+            attrs,
+            count=1,
+        )
+    return f'{attrs} class="{class_name}"'
 
 
 def _apply_table_classes(html: str) -> str:
@@ -140,6 +158,31 @@ def _apply_rowspan_markers(table_html: str) -> str:
             rendered_cells.append(cell)
 
         filtered_rows.append((row_open, rendered_cells, row_close))
+
+    active_rowspans: dict[int, int] = {}
+    for _, cells, _ in filtered_rows:
+        next_col = 1
+        new_rowspans: dict[int, int] = {}
+        for cell in cells:
+            while active_rowspans.get(next_col, 0) > 0:
+                next_col += 1
+
+            cell.logical_col = next_col
+
+            if cell.rowspan > 1:
+                for col in range(next_col, next_col + cell.colspan):
+                    new_rowspans[col] = max(new_rowspans.get(col, 0), cell.rowspan - 1)
+
+            next_col += cell.colspan
+
+        next_active_rowspans = {
+            col: remaining - 1
+            for col, remaining in active_rowspans.items()
+            if remaining > 1
+        }
+        for col, remaining in new_rowspans.items():
+            next_active_rowspans[col] = max(next_active_rowspans.get(col, 0), remaining)
+        active_rowspans = next_active_rowspans
 
     rendered_rows = [
         f"{row_open}{''.join(cell.render() for cell in cells)}{row_close}"
