@@ -94,7 +94,40 @@ Docstrings exist for users of the code, not to duplicate implementation details.
 
 ---
 
-## 7. General Philosophy
+## 7. Package Builds Use pyproject.toml
+Python modules should be packaged with a `pyproject.toml` file. Prefer modern PEP 621 metadata and avoid legacy `setup.py` packaging unless forced by external constraints.
+
+### Guidelines
+- Define package metadata in `[project]`.
+- Use `hatchling` as the build backend and `hatch` to build distributions.
+- Derive the package version from Git tags instead of hard-coding it in source files.
+- Use a `src/` layout for installable packages.
+- Do not generate or commit a dedicated version file unless runtime version introspection explicitly requires it.
+
+### Minimal Example
+```toml
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "example-package"
+description = "Short package description"
+readme = "README.md"
+requires-python = ">=3.11"
+dynamic = ["version"]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/example_package"]
+```
+- Create release tags such as `v1.2.3`; `hatch build` will derive the package version from Git without a separate version file.
+
+---
+
+## 8. General Philosophy
 - Optimise for readability over cleverness.
 - Assume the reader is intelligent but unfamiliar with the code.
 - Write code that you would be happy to maintain in six months.
