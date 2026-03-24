@@ -1,5 +1,7 @@
 # O-Rings
 
+> Work in progress: this page is still being assembled and may be incomplete.
+
 ## Static
 15 - 30% Cross Section Compression
 
