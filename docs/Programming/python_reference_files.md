@@ -10,7 +10,7 @@ The style guide defines expectations for naming, comments, formatting, imports, 
 
 ## Default `.flake8`
 
-[Download the default flake8 config](../assets/documents/flake8.ini){:download=".flake8"}
+[Download the default flake8 config](../assets/documents/.flake8){:download=".flake8"}
 
 Use this as the baseline `flake8` configuration for Python projects. It keeps the default checks and sets the maximum line length to 150 characters.
 
@@ -21,7 +21,7 @@ max-line-length = 150
 
 ## Standard `.gitignore`
 
-[Download the standard gitignore](../assets/documents/gitignore.txt){:download=".gitignore"}
+[Download the standard gitignore](../assets/documents/.gitignore){:download=".gitignore"}
 
 This `.gitignore` covers the usual Python-generated files, virtual environments, build outputs, test caches, and common tool-specific local state that should not be committed.
 
