@@ -100,8 +100,9 @@ Python modules should be packaged with a `pyproject.toml` file. Prefer modern PE
 ### Guidelines
 - Define package metadata in `[project]`.
 - Use `hatchling` as the build backend and `hatch` to build distributions.
-- Derive the package version from Git tags instead of hard-coding it in source files.
+- Define package versions dynamically from Git tags instead of hard-coding them in source files.
 - Use a `src/` layout for installable packages.
+- Do not define versions in `__init__.py`, `_version.py`, or similar source files unless runtime version introspection explicitly requires it.
 - Do not generate or commit a dedicated version file unless runtime version introspection explicitly requires it.
 
 ### Minimal Example
