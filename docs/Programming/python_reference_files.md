@@ -4,7 +4,7 @@ This page collects the default Python reference files I reuse across projects. I
 
 ## Python Style Guide
 
-[Download the Python style guide](../assets/documents/python_style_guide.txt){:download="python_style_guide.txt"}
+[Download the Python style guide](../assets/documents/python_style_guide.txt){: data-download-filename="python_style_guide.md" }
 
 The style guide defines expectations for naming, comments, formatting, imports, type hints, docstrings, and package build structure. It is intended as a consistent baseline rather than a rigid rulebook.
 

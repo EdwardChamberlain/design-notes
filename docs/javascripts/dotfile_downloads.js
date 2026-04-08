@@ -1,5 +1,5 @@
-async function saveDotfileFromLink(link) {
-  const filename = link.dataset.dotfileDownload;
+async function saveFileFromLink(link) {
+  const filename = link.dataset.downloadFilename || link.dataset.dotfileDownload;
   const source = link.getAttribute("href");
 
   if (!filename || !source) {
@@ -38,12 +38,12 @@ async function saveDotfileFromLink(link) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("[data-dotfile-download]").forEach((link) => {
+  document.querySelectorAll("[data-download-filename], [data-dotfile-download]").forEach((link) => {
     link.addEventListener("click", async (event) => {
       event.preventDefault();
 
       try {
-        await saveDotfileFromLink(link);
+        await saveFileFromLink(link);
       } catch (error) {
         if (error instanceof DOMException && error.name === "AbortError") {
           return;
