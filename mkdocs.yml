@@ -26,12 +26,12 @@ hooks:
   - hooks/table_classes.py
 
 markdown_extensions:
+  - fenced_code
   - tables
   - attr_list
   - toc:
       permalink: true
   - admonition
-  - pymdownx.superfences
   - pymdownx.highlight
   - pymdownx.details
   - footnotes
