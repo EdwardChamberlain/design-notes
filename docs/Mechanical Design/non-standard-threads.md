@@ -14,7 +14,6 @@
 | d₁ | Minor diameter of external thread |
 | P | Pitch |
 | H | Height of fundamental triangle |
-|
 
 ## Example Drawing Note
 ```text
