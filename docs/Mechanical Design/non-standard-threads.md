@@ -6,6 +6,7 @@
 
 | Symbol | Description |
 |---|---|
+| H | Height of fundamental triangle = $H = \frac{\sqrt{3}}{2}P$ |
 | D | Major diameter of internal thread |
 | d | Major diameter of external thread |
 | D₂ | Pitch diameter of internal thread |
@@ -13,7 +14,6 @@
 | D₁ | Minor diameter of internal thread |
 | d₁ | Minor diameter of external thread |
 | P | Pitch |
-| H | Height of fundamental triangle |
 
 ## Example Drawing Note
 ```text
